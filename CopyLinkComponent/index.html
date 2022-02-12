@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Copy</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="link">https://stackoverflow.com/questions/17704539/css-getting-text-in-one-line-rather-than-two
+        </div>
+        <button class="copy-btn disable-select" onselectstart="return false">Copy</button>
+    </div>
+</body>
+
+<script>
+    let copybtn = document.querySelector('.copy-btn');
+    let link = document.querySelector('.link');
+
+    copybtn.onclick = () => {
+        navigator.clipboard.writeText(link.innerHTML);
+        copybtn.innerHTML = "Copied";
+        setTimeout(
+            () => {
+                copybtn.innerHTML = "Copy";
+            }, 2000
+        )
+
+    }
+
+</script>
+
+</html>

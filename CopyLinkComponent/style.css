@@ -1,0 +1,57 @@
+/** Disable Selection on HTML element through CSS Code */
+.disable-select {
+  user-select: none; /* supported by Chrome and Opera */
+ -webkit-user-select: none; /* Safari */
+ -khtml-user-select: none; /* Konqueror HTML */
+ -moz-user-select: none; /* Firefox */
+ -ms-user-select: none; /* Internet Explorer/Edge */
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Cursive, "Arial Narrow", Arial, sans-serif;
+}
+
+
+body {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  background-color: #212121;
+  border-radius: 5px;
+}
+
+.link {
+  width: 375px;
+  padding: 12px 10px;
+  border: 1px solid #212121;
+  background-color: #fff;
+  border-radius: 5px;
+  overflow-x: scroll;
+  font-size: 19px;
+  /** For wraping lines into single line for scrolling **/
+  white-space: nowrap;
+}
+
+.link::-webkit-scrollbar{
+    display: none;
+}
+
+.copy-btn {
+  color: #fff;
+  padding: 0px 20px;
+  font-size: 18px;
+  cursor: pointer;
+  background-color: #212121;
+  border: 0px;
+}
